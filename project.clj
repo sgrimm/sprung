@@ -1,6 +1,7 @@
 (defproject sprung "0.1.0"
   :description "TODO"
-  :dependencies [[com.stuartsierra/component "0.2.1"]
+  :dependencies [[org.clojure/clojure "1.6.0"]
+                 [com.stuartsierra/component "0.2.1"]
                  [org.springframework/spring-core "3.2.0.RELEASE"]
                  [org.springframework/spring-context "3.2.0.RELEASE"]
                  [org.springframework/spring-test "3.2.0.RELEASE"]] 
