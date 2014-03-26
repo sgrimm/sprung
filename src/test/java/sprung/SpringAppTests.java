@@ -13,8 +13,14 @@ public class SpringAppTests {
     @Autowired
     private HelloService helloService;
 
+    @Autowired
+    private HelloConsumer helloConsumer;
+
     @Test
     public void testSayHello() {
         Assert.assertEquals("Hello world!", helloService.sayHello());
     }
+
+    @Test
+    public void testSayHelloThroughConsumer() { Assert.assertEquals("Hello world!", helloConsumer.callService());}
 }
