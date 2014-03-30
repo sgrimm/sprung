@@ -16,6 +16,9 @@ public class SpringAppTest {
     @Autowired
     private HelloConsumer helloConsumer;
 
+    @Autowired
+    private SimpleBeanInterface simpleBean;
+
     @Test
     public void testSayHello() {
         Assert.assertEquals("Hello world!", helloService.sayHello());
@@ -23,4 +26,9 @@ public class SpringAppTest {
 
     @Test
     public void testSayHelloThroughConsumer() { Assert.assertEquals("Hello world!", helloConsumer.callService());}
+
+    @Test
+    public void testSayHelloThroughClojure() {
+        Assert.assertEquals("Hello world!", simpleBean.callSpringBean());
+    }
 }
